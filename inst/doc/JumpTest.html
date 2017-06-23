@@ -75,7 +75,7 @@ Department of Applied Mathematics and Statistics, Stony Brook University
 <center>
 <p>Stony Brook, NY 11790</p></em></h4>
 <h4 class="date"><em><center>
-<p>2017-06-21</p></em></h4>
+<p>2017-06-22</p></em></h4>
 
 
 
@@ -87,7 +87,7 @@ Department of Applied Mathematics and Statistics, Stony Brook University
 </div>
 <div id="workflow-meta-analysis" class="section level2">
 <h2>Workflow: Meta Analysis</h2>
-<p>This package provided analysis on high frequency stock markets. You can simply simulate the data using the simulation codes we provided. For example you can simulate a stoachasitc volatility with one factor and jump (SV1FJ) model for 1200 days using the following code.</p>
+<p>This package provided analysis on high frequency stock markets. You can simply simulate the data using the simulation codes we provided. For example you can simulate a stoachasitc volatility with one factor and jump (SV1FJ) model <span class="citation">(Dumitru and Urga 2012)</span> for 1200 days using the following code.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">M &lt;-<span class="st"> </span><span class="dv">390</span>*<span class="dv">60</span>
 m &lt;-<span class="st"> </span><span class="dv">1200</span>
 pric &lt;-<span class="st"> </span><span class="kw">SV1FJ</span>(M,m,<span class="dv">3</span>,.<span class="dv">2</span>,.<span class="dv">03</span>,.<span class="dv">5</span>,<span class="dv">0</span>,.<span class="dv">125</span>,-.<span class="dv">1</span>,-.<span class="dv">62</span>)
@@ -96,7 +96,7 @@ lr &lt;-<span class="st"> </span><span class="kw">diff</span>(lp[<span class="kw
 logreturn &lt;-<span class="st"> </span><span class="kw">matrix</span>(lr,<span class="dt">ncol=</span>m)</code></pre></div>
 <p>Here we simulated our data by seconds, while we grabbed the minute level data and saved the log returns per day by columns. Then we can used the following code to obtain the p-values for three methods (BNS <span class="citation">(Barndorff-Nielsen, Shephard, and Winkel 2006)</span>, Amed, and Amin <span class="citation">(Andersen, Dobrev, and Schaumburg 2012)</span>).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pmat &lt;-<span class="st"> </span><span class="kw">pcombine</span>(logreturn,<span class="kw">c</span>(<span class="st">'BNS'</span>,<span class="st">'Amed'</span>,<span class="st">'Amin'</span>))</code></pre></div>
-<p>Then we can obtain the p-value matrix for the three methods. We can do further p-values pooling and FDR control via BH <span class="citation">(Benjamini and Hochberg 1995)</span> procedure. We provided six pooling methods, four for independent <span class="citation">(Won et al. 2009, <span class="citation">Chang et al. (2013)</span>)</span> and two for dependent <span class="citation">(Chang et al. 2013)</span> strucure. We suggested Stouffer’s dependent (SD) structure.</p>
+<p>Then we can obtain the p-value matrix for the three methods. We can do further p-values pooling and FDR control via BH <span class="citation">(Benjamini and Hochberg 1995, <span class="citation">Yen (2013)</span>)</span> procedure. We provided six pooling methods, four for independent <span class="citation">(Won et al. 2009, <span class="citation">Chang et al. (2013)</span>)</span> and two for dependent <span class="citation">(Chang et al. 2013)</span> strucure. We suggested Stouffer’s dependent (SD) structure.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">res &lt;-<span class="st"> </span><span class="kw">ppool</span>(pmat)
 pvalue &lt;-<span class="st"> </span>res@pvalue
 pvalue_adjusted &lt;-<span class="st"> </span>res@adjp</code></pre></div>
@@ -120,8 +120,14 @@ pvalue_adjusted &lt;-<span class="st"> </span>res@adjp</code></pre></div>
 <div id="ref-chang2013meta">
 <p>Chang, Lun-Ching, Hui-Min Lin, Etienne Sibille, and George C Tseng. 2013. “Meta-Analysis Methods for Combining Multiple Expression Profiles: Comparisons, Statistical Characterization and an Application Guideline.” <em>BMC Bioinformatics</em> 14 (1). BioMed Central: 368.</p>
 </div>
+<div id="ref-dumitru2012identifying">
+<p>Dumitru, Ana-Maria, and Giovanni Urga. 2012. “Identifying Jumps in Financial Assets: A Comparison Between Nonparametric Jump Tests.” <em>Journal of Business &amp; Economic Statistics</em> 30 (2). Taylor &amp; Francis: 242–55.</p>
+</div>
 <div id="ref-won2009choosing">
 <p>Won, Sungho, Nathan Morris, Qing Lu, and Robert C Elston. 2009. “Choosing an Optimal Method to Combine P-Values.” <em>Statistics in Medicine</em> 28 (11). Wiley Online Library: 1537–53.</p>
+</div>
+<div id="ref-yen2013testing">
+<p>Yen, Yu-Min. 2013. “Testing Jumps via False Discovery Rate Control.” <em>PloS One</em> 8 (4). Public Library of Science: e58365.</p>
 </div>
 </div>
 </div>

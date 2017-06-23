@@ -1,6 +1,6 @@
 Package: JumpTest
 Title: Financial Jump Detection
-Version: 0.0.0.9
+Version: 0.0.1
 Authors@R: c(person("Kaiqiao", "Li", email = "kaiqiao.li@stonybrook.edu", role = c("aut", "cre")),
       person("Pei Fen", "Kuan", role = "aut"),
       person("Kan", "He", role = "ctb"),
@@ -16,7 +16,7 @@ RoxygenNote: 6.0.1
 Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: yes
-Packaged: 2017-06-22 03:09:49 UTC; Kaiqiao
+Packaged: 2017-06-23 00:54:58 UTC; Kaiqiao
 Author: Kaiqiao Li [aut, cre],
   Pei Fen Kuan [aut],
   Kan He [ctb],
@@ -24,4 +24,4 @@ Author: Kaiqiao Li [aut, cre],
   Wei Zhu [ctb]
 Maintainer: Kaiqiao Li <kaiqiao.li@stonybrook.edu>
 Repository: CRAN
-Date/Publication: 2017-06-22 05:40:54 UTC
+Date/Publication: 2017-06-23 08:06:29 UTC

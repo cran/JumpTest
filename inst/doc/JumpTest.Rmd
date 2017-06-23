@@ -6,7 +6,7 @@ author: |
   <center> Stony Brook, NY 11790
 date: <center>`r Sys.Date()`
 output: rmarkdown::html_vignette
-bibliography: jumptest.bib
+bibliography: JumpTest.bib
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
   %\VignetteEngine{knitr::rmarkdown}
@@ -26,7 +26,7 @@ library(JumpTest)
 ## Workflow: Meta Analysis
 
 This package provided analysis on high frequency stock markets. You can simply simulate the data using the simulation codes we provided.
-For example you can simulate a stoachasitc volatility with one factor and jump (SV1FJ) model for 1200 days using the following code.
+For example you can simulate a stoachasitc volatility with one factor and jump (SV1FJ) model [@dumitru2012identifying] for 1200 days using the following code.
 
 ```{r}
 M <- 390*60
@@ -43,7 +43,7 @@ Here we simulated our data by seconds, while we grabbed the minute level data an
 pmat <- pcombine(logreturn,c('BNS','Amed','Amin'))
 ```
 
-Then we can obtain the p-value matrix for the three methods. We can do further p-values pooling and FDR control via BH [@benjamini1995controlling] procedure. We provided six pooling methods, four for independent [@won2009choosing, @chang2013meta] and two for dependent [@chang2013meta] strucure. We suggested Stouffer's dependent (SD) structure.
+Then we can obtain the p-value matrix for the three methods. We can do further p-values pooling and FDR control via BH [@benjamini1995controlling, @yen2013testing] procedure. We provided six pooling methods, four for independent [@won2009choosing, @chang2013meta] and two for dependent [@chang2013meta] strucure. We suggested Stouffer's dependent (SD) structure.
 
 ```{r}
 res <- ppool(pmat)

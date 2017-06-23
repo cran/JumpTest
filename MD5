@@ -1,13 +1,13 @@
-e3ae8b4e117bf5ee92346d723d44fd93 *DESCRIPTION
+f05a02513779c9bd95e8b7668c396075 *DESCRIPTION
 a6892cedb455795fd149dd3531a2747c *LICENSE
 a25c006248a2c1c962b108bb30abc2a2 *NAMESPACE
 9f0c55c2ee4b0b228f11ad6627b5be34 *R/RcppExports.R
 6abaa6b68d7a4a00d2c146d7c9b98a40 *R/testsim.R
-7d9e4c4e0cce377f5c7e96389fc9c6a7 *build/partial.rdb
+1381094e9594ee48d15f3958a6c9b4df *build/partial.rdb
 e78c488d45818a7a1555258458035b1e *build/vignette.rds
 d02d6a673616a808fe1b16f390d91d2c *inst/doc/JumpTest.R
-2254f4fa81c8c89b641c54a5f2a176b9 *inst/doc/JumpTest.Rmd
-be5dd71aa683bb9dfa863f97d735a248 *inst/doc/JumpTest.html
+dbb77a055ebab1cefe8b9dcc7015ef6f *inst/doc/JumpTest.Rmd
+7f5c4f23e82596221a7e55a7b18d162f *inst/doc/JumpTest.html
 8a8a943ec125fd9c25b67f3841cba178 *man/JumpTest-package.Rd
 e8bb4ac8b4e9192934a20e11622a9dbc *man/SV.Rd
 0d98a30c43efa947e6b07a9c713933f7 *man/SV1F.Rd
@@ -23,5 +23,5 @@ b4f0b014ec53404e843dbc718fabf57e *src/Makevars
 b4f0b014ec53404e843dbc718fabf57e *src/Makevars.win
 ca4102308ae234deb4990e2171b791db *src/RcppExports.cpp
 6da4c0085f95272ca766b83688ed4114 *src/svj.cpp
-2254f4fa81c8c89b641c54a5f2a176b9 *vignettes/JumpTest.Rmd
-4ee64dd57aa5971dc00e580f7082dd9b *vignettes/JumpTest.bib
+dbb77a055ebab1cefe8b9dcc7015ef6f *vignettes/JumpTest.Rmd
+368b8b70e8c68d973a9b1ed3e43d5046 *vignettes/JumpTest.bib
