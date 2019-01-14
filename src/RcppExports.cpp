@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // lp
 Eigen::VectorXd lp(int n, double p0, double mu, double v0, double dt, double alpha, double c0, Eigen::VectorXd z, Eigen::VectorXd z1, Eigen::VectorXd M0, Eigen::VectorXd x0);
-RcppExport SEXP JumpTest_lp(SEXP nSEXP, SEXP p0SEXP, SEXP muSEXP, SEXP v0SEXP, SEXP dtSEXP, SEXP alphaSEXP, SEXP c0SEXP, SEXP zSEXP, SEXP z1SEXP, SEXP M0SEXP, SEXP x0SEXP) {
+RcppExport SEXP _JumpTest_lp(SEXP nSEXP, SEXP p0SEXP, SEXP muSEXP, SEXP v0SEXP, SEXP dtSEXP, SEXP alphaSEXP, SEXP c0SEXP, SEXP zSEXP, SEXP z1SEXP, SEXP M0SEXP, SEXP x0SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -29,7 +29,7 @@ END_RCPP
 }
 // lp2
 Eigen::VectorXd lp2(int n, double p0, double mu, double v0, double dt, double alpha, double c0, Eigen::VectorXd z, Eigen::VectorXd z1, Eigen::VectorXd x0);
-RcppExport SEXP JumpTest_lp2(SEXP nSEXP, SEXP p0SEXP, SEXP muSEXP, SEXP v0SEXP, SEXP dtSEXP, SEXP alphaSEXP, SEXP c0SEXP, SEXP zSEXP, SEXP z1SEXP, SEXP x0SEXP) {
+RcppExport SEXP _JumpTest_lp2(SEXP nSEXP, SEXP p0SEXP, SEXP muSEXP, SEXP v0SEXP, SEXP dtSEXP, SEXP alphaSEXP, SEXP c0SEXP, SEXP zSEXP, SEXP z1SEXP, SEXP x0SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -49,7 +49,7 @@ END_RCPP
 }
 // pvc
 Eigen::VectorXd pvc(int n, double p0, double mt, double beta0, double beta1, double v0, double st, double vxs, Eigen::MatrixXd z, Eigen::VectorXd m);
-RcppExport SEXP JumpTest_pvc(SEXP nSEXP, SEXP p0SEXP, SEXP mtSEXP, SEXP beta0SEXP, SEXP beta1SEXP, SEXP v0SEXP, SEXP stSEXP, SEXP vxsSEXP, SEXP zSEXP, SEXP mSEXP) {
+RcppExport SEXP _JumpTest_pvc(SEXP nSEXP, SEXP p0SEXP, SEXP mtSEXP, SEXP beta0SEXP, SEXP beta1SEXP, SEXP v0SEXP, SEXP stSEXP, SEXP vxsSEXP, SEXP zSEXP, SEXP mSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -69,7 +69,7 @@ END_RCPP
 }
 // pvc0
 Eigen::VectorXd pvc0(int n, double p0, double mt, double beta0, double beta1, double v0, double st, double vxs, Eigen::MatrixXd z);
-RcppExport SEXP JumpTest_pvc0(SEXP nSEXP, SEXP p0SEXP, SEXP mtSEXP, SEXP beta0SEXP, SEXP beta1SEXP, SEXP v0SEXP, SEXP stSEXP, SEXP vxsSEXP, SEXP zSEXP) {
+RcppExport SEXP _JumpTest_pvc0(SEXP nSEXP, SEXP p0SEXP, SEXP mtSEXP, SEXP beta0SEXP, SEXP beta1SEXP, SEXP v0SEXP, SEXP stSEXP, SEXP vxsSEXP, SEXP zSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -88,7 +88,7 @@ END_RCPP
 }
 // pv2
 Eigen::VectorXd pv2(int n, double mt, double b0, double b1, double b2, double p0, double v10, double v20, double st, Eigen::MatrixXd z, double v1xs, double v2xs, double bv2);
-RcppExport SEXP JumpTest_pv2(SEXP nSEXP, SEXP mtSEXP, SEXP b0SEXP, SEXP b1SEXP, SEXP b2SEXP, SEXP p0SEXP, SEXP v10SEXP, SEXP v20SEXP, SEXP stSEXP, SEXP zSEXP, SEXP v1xsSEXP, SEXP v2xsSEXP, SEXP bv2SEXP) {
+RcppExport SEXP _JumpTest_pv2(SEXP nSEXP, SEXP mtSEXP, SEXP b0SEXP, SEXP b1SEXP, SEXP b2SEXP, SEXP p0SEXP, SEXP v10SEXP, SEXP v20SEXP, SEXP stSEXP, SEXP zSEXP, SEXP v1xsSEXP, SEXP v2xsSEXP, SEXP bv2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -108,4 +108,18 @@ BEGIN_RCPP
     rcpp_result_gen = Rcpp::wrap(pv2(n, mt, b0, b1, b2, p0, v10, v20, st, z, v1xs, v2xs, bv2));
     return rcpp_result_gen;
 END_RCPP
+}
+
+static const R_CallMethodDef CallEntries[] = {
+    {"_JumpTest_lp", (DL_FUNC) &_JumpTest_lp, 11},
+    {"_JumpTest_lp2", (DL_FUNC) &_JumpTest_lp2, 10},
+    {"_JumpTest_pvc", (DL_FUNC) &_JumpTest_pvc, 10},
+    {"_JumpTest_pvc0", (DL_FUNC) &_JumpTest_pvc0, 9},
+    {"_JumpTest_pv2", (DL_FUNC) &_JumpTest_pv2, 13},
+    {NULL, NULL, 0}
+};
+
+RcppExport void R_init_JumpTest(DllInfo *dll) {
+    R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
+    R_useDynamicSymbols(dll, FALSE);
 }

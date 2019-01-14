@@ -4,9 +4,9 @@
 \alias{SV2F}
 \title{SV2F model simulation}
 \usage{
-SV2F(M, m, p.0 = 3, mu = 0.03, v.1 = 0.5, v.2 = 0.5, beta.0 = -1.2,
-  beta.1 = 0.04, beta.2 = 1.5, alpha.1 = -0.137 * exp(-2),
-  alpha.2 = -1.386, beta.v2 = 0.25, r1 = -0.3, r2 = -0.3)
+SV2F(M, m, p.0 = 3, mu = 0.03, v.1 = 0.5, v.2 = 0.5,
+  beta.0 = -1.2, beta.1 = 0.04, beta.2 = 1.5, alpha.1 = -0.137 *
+  exp(-2), alpha.2 = -1.386, beta.v2 = 0.25, r1 = -0.3, r2 = -0.3)
 }
 \arguments{
 \item{M}{number of interverals to be simulated}
